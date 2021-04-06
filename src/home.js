@@ -1,4 +1,4 @@
-export const homeElements = () => {
+export const homeElements = (() => {
   const homeMain = document.createElement('div');
   homeMain.classList.add('main-section');
   const textSection = document.createElement('div');
@@ -19,8 +19,8 @@ export const homeElements = () => {
   homeMain.appendChild(textSection);
   homeMain.appendChild(homeImage);
   
-  console.log(homeMain);
+  // console.log(homeMain);
   return {
     homeMain
   };
-};
+})();

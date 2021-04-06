@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+}
+
+.bg-darkblue {
+  background: #243966;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-btn {
+  background: #424E66;
+  color: white;
+  border: none;
+  margin: 0.5rem;
+  padding: 1rem;
+  width: 20%;
+  font-size: 2rem;
+}
+
+.bg-blue,
+.active {
+  background: #3E63B3;
+  color: black;
+}
