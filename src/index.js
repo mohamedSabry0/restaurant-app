@@ -1,1 +1,3 @@
-console.log("I'm here");
+import { render } from "./render";
+
+render();
