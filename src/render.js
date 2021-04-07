@@ -1,9 +1,23 @@
 import './styles/style.css';
-import {homeElements} from './home';
-import {nav} from './nav';
+import {home} from './home';
+import {contact} from './contact';
+import {menu} from './menu';
+import {createNav} from './nav';
 
-export const render = () => {
+const render = () => {
   const container = document.querySelector('#content');
-  container.appendChild(nav.nav);
-  container.appendChild(homeElements.homeMain);
+  container.innerHTML = '';
+  container.appendChild(createNav());
+
+  const renderMain = (page='home') => {
+    const main = (page == 'home' ? home() : (page == 'menu' ? menu() : contact()));
+    console.log(main);
+    container.appendChild(main);
+  };
+
+  return {
+    renderMain
+  };
 };
+
+export {render}

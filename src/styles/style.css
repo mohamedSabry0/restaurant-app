@@ -3,7 +3,7 @@ body {
 }
 
 .bg-darkblue {
-  background: #243966;
+  background: #3E63B3;
   color: white;
 }
 
@@ -24,6 +24,6 @@ body {
 
 .bg-blue,
 .active {
-  background: #3E63B3;
+  background: #507FE6;
   color: black;
 }

@@ -1,9 +1,10 @@
 const path = require('path');
 
-module.exports = {
-  mode: 'development',
+var config = {
   entry: './src/index.js',
-  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist',
+  },
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
@@ -20,4 +21,12 @@ module.exports = {
       },
     ],
   },
+}
+
+module.exports = (env, argv) =>{
+  
+  if (argv.mode === 'development') {
+    config.devtool = 'inline-source-map';
+  }
+  return config;
 };

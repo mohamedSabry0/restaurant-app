@@ -1,4 +1,4 @@
-export const homeElements = (() => {
+const home = () => {
   const homeMain = document.createElement('div');
   homeMain.classList.add('main-section');
   const textSection = document.createElement('div');
@@ -20,7 +20,7 @@ export const homeElements = (() => {
   homeMain.appendChild(homeImage);
   
   // console.log(homeMain);
-  return {
-    homeMain
-  };
-})();
+  return homeMain;
+};
+
+export {home};

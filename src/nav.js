@@ -1,30 +1,34 @@
-import { homeElements } from "./home";
+import {render} from './render';
 
-export const nav = (() => {
+const createNav = (current = 'home') => {
+  const btnList = ['home', 'menu', 'contact']
   const nav = document.createElement('nav');
-  const homeButton = document.createElement('button');
-  const menuButton = document.createElement('button');
-  const contactButton = document.createElement('button');
   nav.classList.add('bg-darkblue', 'nav');
-
-  homeButton.textContent = 'Home';
-  menuButton.textContent = 'Menu';
-  contactButton.textContent = 'Contact Us';
-  homeButton.classList.add('nav-btn');
-  menuButton.classList.add('nav-btn');
-  contactButton.classList.add('nav-btn');
-
-  nav.appendChild(homeButton);
-  nav.appendChild(menuButton);
-  nav.appendChild(contactButton);
-
+  
   const changeTab = (current, clicked)=> {
     current.classList.toggle('active');
     clicked.classList.toggle('active');
   }
+  
+  btnList.forEach(btnName => {
+    const btn = document.createElement('button');
+    btn.textContent = btnName.toUpperCase();
+    btn.classList.add('nav-btn');
+    btn.addEventListener('click', ()=>{
+      // const current = document.querySelector('.active');
+      render().renderMain(btnName);
+      changeTab(current, btn);
+    })
 
-  return {
-    nav,
-    changeTab
-  }
-})();
+    if (btnName == 'home'){
+      console.log('set active to home')
+      btn.classList.add('active');
+    }
+
+    nav.appendChild(btn);
+  });
+
+  return nav;
+};
+
+export { createNav }
