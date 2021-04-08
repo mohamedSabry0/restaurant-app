@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://mohamedsabry0.github.io/js_library/)
+[Live Demo Link](https://mohamedsabry0.github.io/restaurant-app/)
 
 
 ## Getting Started
