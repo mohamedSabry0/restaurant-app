@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+}
+
+.bg-darkblue {
+  background: #3e63b3;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-btn {
+  background: #424e66;
+  color: white;
+  border: none;
+  margin: 0.5rem;
+  padding: 1rem;
+  width: 20%;
+  font-size: 2rem;
+}
+
+.bg-blue,
+.active {
+  background: #507fe6;
+  color: black;
+}
+
+#content {
+  position: relative;
+  height: 100vh;
+}
+
+#content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: center / cover no-repeat url('../images/brooke-lark-HlNcigvUi4Q-unsplash.jpg');
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.main-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 3px 3px 1px #b6b6b6ad;
+}
+
+.headline {
+  width: 100%;
+}
+
+.menu-item {
+  background-color: darkgrey;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  margin: 0.25rem;
+  box-shadow: 0.3rem 0.2rem 1rem darkgrey;
+}
+
+.menu-image {
+  width: 100%;
+}
+
+.home-intro {
+  font-size: 2rem;
+}
+
+.contact-info {
+  font-size: 2rem;
+  white-space: pre-line;
+}
