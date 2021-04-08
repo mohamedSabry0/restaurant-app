@@ -1,3 +1,3 @@
-import { render } from "./render";
+import { mainRender, changeMain } from "./render";
 
-render();
+mainRender();

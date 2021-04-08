@@ -4,20 +4,25 @@ import {contact} from './contact';
 import {menu} from './menu';
 import {createNav} from './nav';
 
-const render = () => {
-  const container = document.querySelector('#content');
-  container.innerHTML = '';
-  container.appendChild(createNav());
-
-  const renderMain = (page='home') => {
-    const main = (page == 'home' ? home() : (page == 'menu' ? menu() : contact()));
-    console.log(main);
-    container.appendChild(main);
-  };
-
-  return {
-    renderMain
-  };
+const changeActive = (clicked)=> {
+  document.querySelector('.active').classList.toggle('active');
+  clicked.classList.toggle('active');
 };
 
-export {render}
+const changeMain = (page) => {
+  const container = document.querySelector('#content');
+  const oldContent = document.querySelector('.main-section');
+  const newContent = (page == 'home' ? home() : (page == 'menu' ? menu() : contact()))
+  
+  oldContent.outerHTML = '';
+  container.appendChild(newContent);
+};
+
+const mainRender = () => {
+  const container = document.querySelector('#content');
+  container.appendChild(createNav());
+  container.appendChild(home());
+
+};
+
+export {mainRender, changeMain, changeActive};
