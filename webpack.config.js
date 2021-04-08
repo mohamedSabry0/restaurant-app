@@ -1,6 +1,6 @@
 const path = require('path');
 
-var config = {
+const config = {
   entry: './src/index.js',
   devServer: {
     contentBase: './dist',
@@ -21,10 +21,9 @@ var config = {
       },
     ],
   },
-}
+};
 
-module.exports = (env, argv) =>{
-  
+module.exports = (env, argv) => {
   if (argv.mode === 'development') {
     config.devtool = 'inline-source-map';
   }

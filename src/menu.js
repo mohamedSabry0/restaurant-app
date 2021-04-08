@@ -1,6 +1,7 @@
-import first from './images/hans-vivek-4JO8HSEDW7w-unsplash.jpg'
-import second from './images/jakub-kapusnak-4f4YZfDMLeU-unsplash.jpg'
-import third from './images/sigmund-9hzr53AsB8U-unsplash.jpg'
+import first from './images/hans-vivek-4JO8HSEDW7w-unsplash.jpg';
+import second from './images/jakub-kapusnak-4f4YZfDMLeU-unsplash.jpg';
+import third from './images/sigmund-9hzr53AsB8U-unsplash.jpg';
+
 const menu = () => {
   const menuMain = document.createElement('div');
   menuMain.classList.add('main-section');
@@ -8,13 +9,13 @@ const menu = () => {
   menuHeading.classList.add('headline');
   menuHeading.textContent = 'MENU';
   menuMain.appendChild(menuHeading);
-  
-  let imageList = [
+
+  const imageList = [
     [first, 'one'],
     [second, 'two'],
-    [third, 'many']
+    [third, 'many'],
   ];
-  imageList.forEach((element)=>{
+  imageList.forEach((element) => {
     const menuItem = document.createElement('div');
     const image = document.createElement('img');
     image.setAttribute('src', element[0]);
@@ -26,8 +27,8 @@ const menu = () => {
     menuItem.classList.add('menu-item');
     menuMain.appendChild(menuItem);
   });
-  
+
   return menuMain;
 };
 
-export {menu};
+export { menu as default };

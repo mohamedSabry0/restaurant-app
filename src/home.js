@@ -18,9 +18,8 @@ const home = () => {
 
   homeMain.appendChild(textSection);
   homeMain.appendChild(homeImage);
-  
-  // console.log(homeMain);
+
   return homeMain;
 };
 
-export {home};
+export { home as default };

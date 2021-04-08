@@ -3,7 +3,7 @@ body {
 }
 
 .bg-darkblue {
-  background: #3E63B3;
+  background: #3e63b3;
   color: white;
 }
 
@@ -13,7 +13,7 @@ body {
 }
 
 .nav-btn {
-  background: #424E66;
+  background: #424e66;
   color: white;
   border: none;
   margin: 0.5rem;
@@ -24,7 +24,7 @@ body {
 
 .bg-blue,
 .active {
-  background: #507FE6;
+  background: #507fe6;
   color: black;
 }
 
@@ -41,7 +41,7 @@ body {
   right: 0;
   left: 0;
   background: center / cover no-repeat url('../images/brooke-lark-HlNcigvUi4Q-unsplash.jpg');
-  opacity: 0.5;
+  opacity: 0.3;
   z-index: -1;
 }
 
@@ -51,7 +51,7 @@ body {
   align-items: baseline;
   justify-content: center;
   text-align: center;
-  text-shadow: 3px 3px 1px #e4e4e4ad;
+  text-shadow: 3px 3px 1px #b6b6b6ad;
 }
 
 .headline {

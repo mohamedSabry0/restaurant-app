@@ -1,21 +1,20 @@
-import {changeMain, changeActive} from './render';
+import { changeMain, changeActive } from './switcher';
 
 const createNav = () => {
-  const btnList = ['home', 'menu', 'contact']
+  const btnList = ['home', 'menu', 'contact'];
   const nav = document.createElement('nav');
   nav.classList.add('bg-darkblue', 'nav');
-  
-  btnList.forEach(btnName => {
+
+  btnList.forEach((btnName) => {
     const btn = document.createElement('button');
     btn.textContent = btnName.toUpperCase();
     btn.classList.add('nav-btn');
-    btn.addEventListener('click', ()=>{
+    btn.addEventListener('click', () => {
       changeActive(btn);
       changeMain(btnName);
-    })
+    });
 
-    if (btnName == 'home'){
-      console.log('set active to home')
+    if (btnName === 'home') {
       btn.classList.add('active');
     }
 
@@ -25,4 +24,4 @@ const createNav = () => {
   return nav;
 };
 
-export { createNav }
+export { createNav as default };
